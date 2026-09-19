@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="쇼츠와 영상 링크를 넣으면, 무엇을 분석할지 정리한 프롬프트를 복사합니다."
+    />
+    <title>다시쓰기 — 분석 프롬프트</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="src/features/analyze/analyze.css" />
+    <link rel="stylesheet" href="src/features/analyze/board.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="home-link" href="index.html" data-i18n="nav.home">수업 홈</a>
+      <strong class="brand" data-i18n="nav.brand">다시쓰기</strong>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="board is-empty" data-board></section>
+
+      <aside class="tool">
+        <p class="eyebrow">
+          <span class="eyebrow-mark" aria-hidden="true">◎</span>
+          <span data-i18n="tool.eyebrow">조회수보다 중요한 이유</span>
+        </p>
+        <h1 data-i18n="tool.title">링크를 넣으면, 분석 프롬프트를 복사해요.</h1>
+        <p class="lead" data-i18n="tool.lead">
+          AI에게 시킬 일을 정리합니다. 유튜브는 대본을 같이 넣고, 없으면 링크만으로도 프롬프트를 만듭니다.
+        </p>
+
+        <form class="tool-form" data-analyze-form>
+          <label>
+            <span data-i18n="tool.linkLabel">공개 영상 링크</span>
+            <input
+              data-url
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://www.youtube.com/shorts/"
+              data-i18n-placeholder="tool.linkPlaceholder"
+            />
+          </label>
+          <button class="script-toggle" type="button" data-script-toggle data-i18n="tool.pasteToggle">
+            대본 붙여넣기
+          </button>
+          <label class="script-box" data-script-box hidden>
+            <span data-i18n="tool.scriptLabel">대본 (선택)</span>
+            <textarea data-script rows="5" data-i18n-placeholder="tool.scriptPlaceholder"></textarea>
+          </label>
+          <button class="go" type="submit">
+            <span data-i18n="tool.submit">프롬프트 만들기</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <div class="platforms" data-platforms>
+          <button type="button" data-platform="instagram">Instagram</button>
+          <button type="button" data-platform="tiktok">TikTok</button>
+          <button type="button" data-platform="youtube" class="is-on">YouTube Shorts</button>
+          <button type="button" data-platform="facebook">Facebook</button>
+        </div>
+        <p class="hint" data-i18n="tool.hint">만든 프롬프트를 클로드나 챗GPT에 붙여 넣으면 됩니다.</p>
+        <button class="demo" type="button" data-demo data-i18n="tool.demo">예시로 먼저 보기</button>
+        <p class="status" data-status hidden></p>
+        <div class="progress" data-progress hidden>
+          <div class="progress-row">
+            <span class="progress-dot" aria-hidden="true"></span>
+            <span data-progress-label>원본 대본 작성 중</span>
+            <span data-progress-pct>0%</span>
+          </div>
+          <div class="progress-track"><i data-progress-bar></i></div>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="src/app/analyze.js"></script>
+  </body>
+</html>
