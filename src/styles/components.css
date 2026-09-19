@@ -1,16 +1,16 @@
 .eyebrow,
 .dt {
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--pine);
 }
 
 .lede {
-  margin-top: 1.25rem;
-  max-width: 34rem;
+  margin-top: 1rem;
+  max-width: 36rem;
   color: var(--muted);
-  font-size: 1.08rem;
 }
 
 .muted {
@@ -19,7 +19,7 @@
 
 .lang-toggle {
   display: flex;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -27,27 +27,32 @@
 .lang-toggle button {
   background: transparent;
   border: 0;
-  padding: 0.3rem 0.65rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
   cursor: pointer;
 }
 
 .lang-toggle button[aria-pressed="true"] {
   background: var(--ink);
-  color: var(--paper);
+  color: #fff;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   background: var(--pine);
-  color: #f4fffb;
+  color: #fff;
   text-decoration: none;
   border: 0;
   border-radius: 999px;
-  padding: 0.8rem 1.25rem;
+  padding: 0.85rem 1.6rem;
   cursor: pointer;
   font-weight: 600;
+  transition: background 0.15s ease;
 }
 
 .btn:hover {
@@ -55,90 +60,82 @@
 }
 
 .btn:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: wait;
 }
 
-.learn-card,
-.slot-card,
-.review-card {
-  background: var(--paper-deep);
-  padding: 1.5rem 1.4rem 1.6rem;
-  border-radius: 1.15rem;
-  border: 1px solid #d4ebe6;
+.btn-ghost {
+  background: transparent;
+  color: var(--pine);
+  border: 1px solid var(--line-strong);
 }
 
-.index {
-  font-size: 1.05rem;
+.btn-ghost:hover {
+  background: var(--pine-soft);
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem;
+}
+
+.learn-card .index {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--pine);
-  margin-bottom: 1.1rem;
-}
-
-.slot-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1.1rem;
-}
-
-.time-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  border-top: 1px solid var(--line);
-  padding: 0.65rem 0;
-  font-size: 0.95rem;
-}
-
-.review-card p:first-child {
-  font-size: 1.02rem;
-}
-
-.review-name {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--pine);
 }
 
-input[readonly] {
-  color: var(--ink);
-  background: #ffffff80;
+.learn-card h3 {
+  margin-top: 0.9rem;
+}
+
+.learn-card p.muted {
+  margin-top: 0.5rem;
+  font-size: 0.97rem;
 }
 
 .form {
   display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+  max-width: var(--narrow);
+}
+
+.form label span,
+.form .dt {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
 }
 
 .form-fields {
   display: grid;
-  gap: 1.35rem;
-  max-width: var(--narrow);
-}
-
-.form-schedule {
-  margin-top: 0.4rem;
-}
-
-.form label span {
-  display: block;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 0.35rem;
+  gap: 1.25rem;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  border-radius: 0;
-  padding: 0.45rem 0 0.55rem;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.55rem;
+  padding: 0.6rem 0.75rem;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path fill='%23566e71' d='M0 0l5 6 5-6z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.1rem;
 }
 
 textarea {
@@ -150,14 +147,14 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-bottom-color: var(--ink);
+  border-color: var(--pine);
+  box-shadow: 0 0 0 3px #1f7a6322;
 }
 
 .choices {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
-  padding-top: 0.35rem;
 }
 
 .choices label {
@@ -173,8 +170,7 @@ textarea:focus {
 }
 
 .status {
-  padding: 0.9rem 0;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .status[data-state="ok"] {
@@ -183,8 +179,4 @@ textarea:focus {
 
 .status[data-state="err"] {
   color: var(--err);
-}
-
-#instructor h3 {
-  font-size: 2rem;
 }

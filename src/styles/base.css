@@ -6,20 +6,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
   margin: 0;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1.0625rem;
+  line-height: 1.7;
   text-rendering: optimizeLegibility;
-  background:
-    radial-gradient(1200px 480px at 10% -10%, #d8f4e8 0%, transparent 70%),
-    radial-gradient(900px 520px at 100% 0%, #cfeaf8 0%, transparent 65%),
-    linear-gradient(180deg, #e7f7f3 0%, #e4f3f8 48%, #eaf8f2 100%);
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  background: var(--paper);
 }
 
 img,
@@ -39,11 +37,15 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.7rem, 4.6vw, 2.85rem);
+  font-size: clamp(2rem, 5vw, 3.1rem);
 }
 
 h2 {
-  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.15rem;
 }
 
 p {
@@ -56,6 +58,7 @@ a {
 
 :lang(ko) h1,
 :lang(ko) h2,
+:lang(ko) h3,
 :lang(ko) p,
 :lang(ko) .wordmark {
   word-break: keep-all;
@@ -67,4 +70,9 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
 }

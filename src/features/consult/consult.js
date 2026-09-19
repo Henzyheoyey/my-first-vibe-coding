@@ -2,15 +2,9 @@ export function selectedGoalValue() {
   return document.querySelector("[data-goal-select]")?.value ?? "";
 }
 
-export function fillConsult(fields) {
+export function fillConsult({ goalValue }) {
   const goalField = document.querySelector("[data-goal-field]");
-  if (goalField && fields.goalValue) goalField.value = fields.goalValue;
-
-  const formRoot = document.querySelector("[data-form-schedule]");
-  if (fields.selection && formRoot?.slotPicker) {
-    formRoot.slotPicker.applySelection(fields.selection);
-  }
-
+  if (goalField && goalValue) goalField.value = goalValue;
   document.querySelector("#register")?.scrollIntoView({ behavior: "smooth" });
 }
 

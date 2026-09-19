@@ -1,133 +1,90 @@
-.package-grid {
+.time-chips {
   display: grid;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
+  margin-top: 2.25rem;
 }
 
-.pkg-card {
+.time-chip {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  padding: 1rem 1.1rem;
-  border-radius: 1rem;
-  border: 1px solid #c6e8e2;
-  background: #ffffffd9;
+  gap: 0.9rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
   cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
-.pkg-card:has(input:checked) {
+.time-chip:hover:not(:disabled) {
   border-color: var(--pine);
-  background: linear-gradient(160deg, #e7f8f4, #e4f4fb);
-  font-weight: 600;
 }
 
-.pkg-card input {
-  width: auto;
-  accent-color: var(--pine);
-}
-
-.slot-windows {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.75rem;
-}
-
-.slot-windows h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.8rem;
-}
-
-.time-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7.4rem, 1fr));
-  gap: 0.5rem;
-}
-
-.time-cell {
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 0.7rem;
-  padding: 0.65rem 0.35rem;
-  cursor: pointer;
-  font-size: 0.86rem;
-}
-
-.time-cell.is-on {
+.time-chip.is-on {
   border-color: var(--pine);
-  background: linear-gradient(135deg, #b6f0cf, #9ed7f5);
-  font-weight: 700;
+  background: var(--pine-soft);
 }
 
-.time-cell.is-booked {
-  background: #edf1f1;
-  color: var(--muted);
-  text-decoration: line-through;
+.time-chip:disabled {
   cursor: not-allowed;
+  opacity: 0.55;
 }
 
-#schedule .lede,
-#register .lede {
-  max-width: 42rem;
+.chip-mark {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  color: transparent;
 }
 
-.schedule-hint {
-  margin-top: 1rem;
-  color: var(--pine);
-  font-weight: 600;
+.time-chip.is-on .chip-mark {
+  border-color: var(--pine);
+  background: var(--pine);
+  color: #fff;
 }
 
-.slot-summary {
-  margin-top: 1.25rem;
-  padding: 0.9rem 1rem;
-  border-radius: 0.9rem;
-  background: #ffffffd9;
-  border: 1px dashed var(--pine);
-  font-weight: 600;
-}
-
-.tune-block {
-  margin-top: 1.5rem;
-  padding: 1.1rem 1.15rem;
-  border-radius: 1.1rem;
-  background: #ffffffcc;
-  border: 1px solid #c6e8e2;
-}
-
-.tune-line {
+.chip-day {
+  display: block;
   font-weight: 700;
+  font-size: 1.05rem;
 }
 
-.session-line {
+.chip-hours {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.chip-full {
+  margin-left: auto;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--err);
+}
+
+.schedule-foot {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem 0.45rem;
-  margin-top: 0.85rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.session-line select {
-  width: auto;
-  min-width: 3.6rem;
-  border: 1px solid var(--line);
-  border-radius: 0.55rem;
-  padding: 0.28rem 0.55rem;
-  background: #fff;
-}
-
-.session-mins {
-  font-weight: 700;
-  color: var(--pine);
-}
-
-.session-worth {
-  margin-top: 0.45rem;
-  font-size: 0.86rem;
+.schedule-note {
+  font-size: 0.88rem;
   color: var(--muted);
 }
 
 @media (min-width: 800px) {
-  .package-grid,
-  .slot-windows {
+  .time-chips {
     grid-template-columns: 1fr 1fr;
   }
 }

@@ -1,6 +1,5 @@
 import { t } from "../../shared/language.js";
-import { loadBooked } from "../schedule/booked.js";
-import { bindSlotPicker } from "../schedule/slot-picker.js";
+import { bindPlanFields } from "./plan-fields.js";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/henzy0625@gmail.com";
 const CLASS_EMAIL = "henzy0625@gmail.com";
@@ -66,24 +65,11 @@ function showMessage(form, status, text) {
   box.textContent = text;
 }
 
-export async function initRegister() {
+export function initRegister() {
   const form = document.querySelector("[data-register-form]");
-  const scheduleRoot = form?.querySelector("[data-form-schedule]");
   if (!form) return;
 
-  await loadBooked();
-
-  const picker = scheduleRoot
-    ? bindSlotPicker(scheduleRoot, {
-        hint: scheduleRoot.querySelector("[data-schedule-hint]"),
-        summary: scheduleRoot.querySelector("[data-slot-summary]"),
-        onChange: (text) => {
-          const field = form.querySelector("[data-timetable-field]");
-          if (field) field.value = text;
-        },
-      })
-    : null;
-
+  const planFields = bindPlanFields(form.querySelector("[data-form-plan]"));
   const submit = form.querySelector("[type=submit]");
 
   form.addEventListener("submit", async (event) => {
@@ -95,7 +81,7 @@ export async function initRegister() {
     try {
       await sendApplication(values);
       form.reset();
-      picker?.reset();
+      planFields.reset();
       showMessage(form, "ok", t("register.success"));
     } catch {
       window.location.href = mailtoUrl(values);

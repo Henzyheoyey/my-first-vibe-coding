@@ -1,0 +1,55 @@
+.picked-time {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.55rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-soft);
+}
+
+.picked-time-text {
+  font-weight: 600;
+}
+
+.picked-time-text.is-empty {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.edit-link {
+  margin-left: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pine);
+  text-underline-offset: 0.2em;
+}
+
+.plan-row {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.plan-total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.plan-total-sub {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (min-width: 560px) {
+  .plan-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

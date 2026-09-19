@@ -1,23 +1,41 @@
+import { t } from "../../shared/language.js";
 import { fillConsult, selectedGoalValue } from "../consult/consult.js";
-import { loadBooked } from "./booked.js";
-import { bindSlotPicker } from "./slot-picker.js";
+import { loadFullWindows, windowIsFull } from "./booked.js";
+import { getChosenWindows, onTimeChange, toggleWindow } from "./time-choice.js";
+
+function paintChips(chips) {
+  const chosen = getChosenWindows();
+  chips.querySelectorAll(".time-chip").forEach((chip) => {
+    const on = chosen.includes(chip.dataset.window);
+    chip.classList.toggle("is-on", on);
+    chip.setAttribute("aria-pressed", String(on));
+  });
+}
+
+function markFullChips(chips) {
+  chips.querySelectorAll(".time-chip").forEach((chip) => {
+    if (!windowIsFull(chip.dataset.window)) return;
+    chip.disabled = true;
+    chip.querySelector("[data-chip-full]").textContent = t("schedule.full");
+  });
+}
 
 export async function initSchedule() {
-  const root = document.querySelector("#schedule");
-  if (!root) return;
+  const chips = document.querySelector("[data-time-chips]");
+  if (!chips) return;
 
-  await loadBooked();
+  await loadFullWindows();
+  markFullChips(chips);
 
-  const picker = bindSlotPicker(root, {
-    hint: root.querySelector("[data-schedule-hint]"),
-    summary: root.querySelector("[data-slot-summary]"),
-    consultBtn: root.querySelector("[data-schedule-consult]"),
+  chips.addEventListener("click", (event) => {
+    const chip = event.target.closest(".time-chip");
+    if (chip && !chip.disabled) toggleWindow(chip.dataset.window);
   });
 
-  root.querySelector("[data-schedule-consult]")?.addEventListener("click", () => {
-    fillConsult({
-      goalValue: selectedGoalValue(),
-      selection: picker?.getSelection(),
-    });
+  onTimeChange(() => paintChips(chips));
+  document.addEventListener("i18n", () => markFullChips(chips));
+
+  document.querySelector("[data-schedule-consult]")?.addEventListener("click", () => {
+    fillConsult({ goalValue: selectedGoalValue() });
   });
 }
