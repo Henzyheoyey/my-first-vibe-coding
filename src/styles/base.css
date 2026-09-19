@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  background:
+    radial-gradient(1200px 480px at 10% -10%, #d8f4e8 0%, transparent 70%),
+    radial-gradient(900px 520px at 100% 0%, #cfeaf8 0%, transparent 65%),
+    linear-gradient(180deg, #e7f7f3 0%, #e4f3f8 48%, #eaf8f2 100%);
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 4.6vw, 2.85rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:lang(ko) h1,
+:lang(ko) h2,
+:lang(ko) p,
+:lang(ko) .wordmark {
+  word-break: keep-all;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}

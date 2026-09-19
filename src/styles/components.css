@@ -1,0 +1,190 @@
+.eyebrow,
+.dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.lede {
+  margin-top: 1.25rem;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  background: transparent;
+  border: 0;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+}
+
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pine);
+  color: #f4fffb;
+  text-decoration: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--pine-hover);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.learn-card,
+.slot-card,
+.review-card {
+  background: var(--paper-deep);
+  padding: 1.5rem 1.4rem 1.6rem;
+  border-radius: 1.15rem;
+  border: 1px solid #d4ebe6;
+}
+
+.index {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--pine);
+  margin-bottom: 1.1rem;
+}
+
+.slot-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+  padding: 0.65rem 0;
+  font-size: 0.95rem;
+}
+
+.review-card p:first-child {
+  font-size: 1.02rem;
+}
+
+.review-name {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pine);
+}
+
+input[readonly] {
+  color: var(--ink);
+  background: #ffffff80;
+}
+
+.form {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.form-fields {
+  display: grid;
+  gap: 1.35rem;
+  max-width: var(--narrow);
+}
+
+.form-schedule {
+  margin-top: 0.4rem;
+}
+
+.form label span {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 0.45rem 0 0.55rem;
+}
+
+textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: var(--ink);
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding-top: 0.35rem;
+}
+
+.choices label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+
+.choices input {
+  width: auto;
+  accent-color: var(--pine);
+}
+
+.status {
+  padding: 0.9rem 0;
+  font-size: 0.98rem;
+}
+
+.status[data-state="ok"] {
+  color: var(--ok);
+}
+
+.status[data-state="err"] {
+  color: var(--err);
+}
+
+#instructor h3 {
+  font-size: 2rem;
+}

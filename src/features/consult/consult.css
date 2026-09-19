@@ -1,0 +1,110 @@
+.promo {
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.goal-card {
+  margin-top: 2rem;
+  padding: 1.35rem 1.3rem 1.45rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(160deg, #ffffffee 0%, #e7f8f4 55%, #e4f4fb 100%);
+  border: 1px solid #c6e8e2;
+  box-shadow: 0 10px 30px #7ec8c01f;
+}
+
+.goal-card label span {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  margin-bottom: 0.65rem;
+}
+
+.goal-card select {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path fill='%233aa88a' d='M0 0l6 8 6-8z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.2rem;
+}
+
+.goal-card select:focus {
+  outline: 2px solid var(--mint);
+  border-color: var(--pine);
+}
+
+.consult-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #13443c;
+  background: linear-gradient(135deg, #b6f0cf 0%, #9ee7e0 48%, #9ed7f5 100%);
+  box-shadow: 0 8px 0 #7ab8c8, 0 12px 24px #7ec8e355;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.schedule-consult {
+  display: none;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.schedule-consult.is-on {
+  display: flex;
+  animation: pop-in 0.4s ease;
+}
+
+.consult-sparkle {
+  font-size: 0.85rem;
+  color: #2f8f9a;
+  animation: twinkle 1.4s ease-in-out infinite;
+}
+
+.consult-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 0 #6eacc0, 0 16px 28px #7ec8e366;
+}
+
+.consult-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #6eacc0;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}

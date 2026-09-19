@@ -1,0 +1,17 @@
+:root {
+  --paper: #e8f6f2;
+  --paper-deep: #ffffffd9;
+  --sky: #d9f0f8;
+  --ink: #16363c;
+  --muted: #4d6f75;
+  --line: #b9d8d4;
+  --mint: #7ed9b8;
+  --aqua: #6ec9e2;
+  --pine: #3aa88a;
+  --pine-hover: #2e8f75;
+  --ok: #2e8f75;
+  --err: #c45b4a;
+  --sans: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  --wide: 68rem;
+  --narrow: 38rem;
+}

@@ -1,0 +1,50 @@
+.tools-heading {
+  margin-top: 2.4rem;
+  font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.tools-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.4rem, 1.4vw, 0.7rem);
+  margin-top: 0.9rem;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .tools-row {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.tool-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: clamp(0.45rem, 1.6vw, 0.75rem) clamp(0.35rem, 1.2vw, 0.6rem);
+  background: #ffffff24;
+  border: 1px solid #d4ebe633;
+  border-radius: 0.85rem;
+}
+
+.tool-logo img {
+  width: clamp(1.05rem, 3vw, 1.45rem);
+  height: clamp(1.05rem, 3vw, 1.45rem);
+  opacity: 1;
+}
+
+.tool-logo span {
+  font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.tools-caption {
+  margin-top: 0.7rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  opacity: 0.75;
+}

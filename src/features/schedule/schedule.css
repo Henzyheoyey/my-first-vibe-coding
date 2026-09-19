@@ -1,0 +1,133 @@
+.package-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.pkg-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid #c6e8e2;
+  background: #ffffffd9;
+  cursor: pointer;
+}
+
+.pkg-card:has(input:checked) {
+  border-color: var(--pine);
+  background: linear-gradient(160deg, #e7f8f4, #e4f4fb);
+  font-weight: 600;
+}
+
+.pkg-card input {
+  width: auto;
+  accent-color: var(--pine);
+}
+
+.slot-windows {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.slot-windows h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.4rem, 1fr));
+  gap: 0.5rem;
+}
+
+.time-cell {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 0.7rem;
+  padding: 0.65rem 0.35rem;
+  cursor: pointer;
+  font-size: 0.86rem;
+}
+
+.time-cell.is-on {
+  border-color: var(--pine);
+  background: linear-gradient(135deg, #b6f0cf, #9ed7f5);
+  font-weight: 700;
+}
+
+.time-cell.is-booked {
+  background: #edf1f1;
+  color: var(--muted);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+#schedule .lede,
+#register .lede {
+  max-width: 42rem;
+}
+
+.schedule-hint {
+  margin-top: 1rem;
+  color: var(--pine);
+  font-weight: 600;
+}
+
+.slot-summary {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  background: #ffffffd9;
+  border: 1px dashed var(--pine);
+  font-weight: 600;
+}
+
+.tune-block {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: 1.1rem;
+  background: #ffffffcc;
+  border: 1px solid #c6e8e2;
+}
+
+.tune-line {
+  font-weight: 700;
+}
+
+.session-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.session-line select {
+  width: auto;
+  min-width: 3.6rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  padding: 0.28rem 0.55rem;
+  background: #fff;
+}
+
+.session-mins {
+  font-weight: 700;
+  color: var(--pine);
+}
+
+.session-worth {
+  margin-top: 0.45rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+@media (min-width: 800px) {
+  .package-grid,
+  .slot-windows {
+    grid-template-columns: 1fr 1fr;
+  }
+}

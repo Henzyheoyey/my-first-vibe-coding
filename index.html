@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="미국인과 함께하는 1:1 바이브코딩 수업. 비지니스 회화와 나만의 프로젝트를 레벨에 맞춰 배웁니다."
+    />
+    <title>미국인과 함께하는 바이브코딩 배우기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/layout.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/features/consult/consult.css" />
+    <link rel="stylesheet" href="src/features/schedule/schedule.css" />
+    <link rel="stylesheet" href="src/features/instructor/instructor.css" />
+    <link rel="stylesheet" href="src/features/tools/tools.css" />
+    <link rel="stylesheet" href="src/features/catch/catch.css" />
+  </head>
+  <body>
+    <header class="wrap site-header">
+      <a class="wordmark" href="#top" data-i18n="nav.wordmark">미국인과 함께하는 바이브코딩 배우기</a>
+      <nav>
+        <div class="nav-links">
+          <a href="#schedule" data-i18n="nav.schedule">시간표보기</a>
+          <a href="#reviews" data-i18n="nav.reviews">후기</a>
+          <a href="#instructor" data-i18n="nav.instructor">강사</a>
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="ko" aria-pressed="true">KO</button>
+          <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-copy">
+          <h1 data-i18n="hero.title">미국인과 함께하는 바이브코딩 배우기</h1>
+          <p class="promo" data-i18n="hero.promo">
+            영어를 완벽히 구사하지 않아도 됩니다. 코딩을 전공하지 않아도 됩니다. 비지니스 회화를 접해보고, 나만의 프로젝트를 만들기 레벨 맞춤화하여 제공되는 1:1 수업.
+          </p>
+          <div class="goal-card">
+            <label>
+              <span data-i18n="goal.label">나의 목표는?</span>
+              <select data-goal-select>
+                <option value="" disabled selected data-i18n="goal.placeholder">목표를 골라 주세요</option>
+                <option value="conversation" data-i18n="goal.conversation">원어민회화에 적응하고 더 자연스럽게 질문하고 싶어요</option>
+                <option value="business" data-i18n="goal.business">일상회화보다는 비지니스 회화를 늘리고 싶어요</option>
+                <option value="vibe" data-i18n="goal.vibe">바이브코딩을 배워 내것으로 만들고 싶어요</option>
+                <option value="special" data-i18n="goal.special">바이브코딩에서 특별히 배우고 싶은 파트가 있어요</option>
+                <option value="other" data-i18n="goal.other">기타(하고 싶은 말에 작성해주세요)</option>
+              </select>
+            </label>
+            <button class="consult-btn" type="button" data-consult-btn>
+              <span class="consult-sparkle" aria-hidden="true">✦</span>
+              <span data-i18n="goal.consult">무료수업상담 받기</span>
+              <span class="consult-sparkle" aria-hidden="true">✦</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="about">
+        <div class="wrap split">
+          <h2 data-i18n="about.title">내 목표에 맞는 방식으로!</h2>
+          <div>
+            <p data-i18n="about.body">
+              미국인 강사와 대화형 수업+ 바이브코딩 1:1 강의는 저희가 유일해요.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="catch" data-catch="horizon" data-scroll>
+        <div class="catch-bg" aria-hidden="true"></div>
+        <div class="catch-veil" aria-hidden="true"></div>
+        <div class="catch-inner">
+          <p class="catch-kicker" data-i18n="catch.1.kicker">AI의 최전선은 미국에 있습니다.</p>
+          <p class="catch-line" data-i18n="catch.1.line">영어 프롬프트로 기술의 속도를 압도하세요.</p>
+        </div>
+      </aside>
+
+      <section class="band" id="learn">
+        <div class="wrap">
+          <h2 data-i18n="learn.title">가져가는 것</h2>
+          <div class="learn-grid stack">
+            <article class="learn-card">
+              <p class="index">01</p>
+              <h3 data-i18n="learn.1.title">바이브 코딩 감각</h3>
+              <p class="muted" data-i18n="learn.1.body">AI와 대화하듯 만드는 리듬이 남습니다. 막혀도 어떻게 물어보고 고칠지 손에 익습니다.</p>
+            </article>
+            <article class="learn-card">
+              <p class="index">02</p>
+              <h3 data-i18n="learn.2.title">Cursor로 일하는 힘</h3>
+              <p class="muted" data-i18n="learn.2.body">바이브 코딩에 쓰는 에디터를 직접 다룹니다. 수업이 끝나도 같은 방식으로 계속 만들 수 있습니다.</p>
+            </article>
+            <article class="learn-card">
+              <p class="index">03</p>
+              <h3 data-i18n="learn.3.title">내 이름의 첫 결과물</h3>
+              <p class="muted" data-i18n="learn.3.body">구경만 하고 끝나지 않습니다. 두 시간이 지나면 내가 만든 작은 프로젝트가 남아 있습니다.</p>
+            </article>
+          </div>
+          <h3 class="tools-heading" data-i18n="tools.title">함께 쓰는 도구</h3>
+          <div class="tools-row">
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/cursor/000000" alt="Cursor" />
+              <span>Cursor</span>
+            </div>
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/anthropic/191919" alt="Claude" />
+              <span>Claude</span>
+            </div>
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT" />
+              <span>ChatGPT</span>
+            </div>
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini" />
+              <span>Gemini</span>
+            </div>
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/githubcopilot/000000" alt="GitHub Copilot" />
+              <span>Copilot</span>
+            </div>
+            <div class="tool-logo">
+              <img src="https://cdn.simpleicons.org/perplexity/1FB8A9" alt="Perplexity" />
+              <span>Perplexity</span>
+            </div>
+          </div>
+          <p class="muted tools-caption" data-i18n="tools.caption">Cursor를 중심으로, 에이전트 작업에 쓰는 AI를 수업에서 함께 엽니다.</p>
+        </div>
+      </section>
+
+      <aside class="catch" data-catch="talk" data-scroll>
+        <div class="catch-bg" aria-hidden="true"></div>
+        <div class="catch-veil" aria-hidden="true"></div>
+        <div class="catch-inner">
+          <p class="catch-kicker" data-i18n="catch.2.kicker">코딩을 몰라도 괜찮습니다.</p>
+          <p class="catch-line" data-i18n="catch.2.line">AI와 대화하며 나만의 서비스를 만드세요.</p>
+        </div>
+      </aside>
+
+      <section class="band" id="schedule">
+        <div class="wrap">
+          <h2 data-i18n="schedule.title">시간표</h2>
+          <p class="lede" data-i18n="schedule.lede">
+            선호하는 스케줄을 선택해주시고 상담때 확정됩니다. 선착순 스케줄 시스템에 따라 선택한 스케줄이 불가능 할 수 있습니다.
+          </p>
+          <div class="package-grid">
+            <label class="pkg-card">
+              <input type="radio" name="package" value="two45" data-package />
+              <span data-i18n="schedule.pkg.two45">토요일 또는 일요일 2회 (45분씩)</span>
+            </label>
+            <label class="pkg-card">
+              <input type="radio" name="package" value="one90" data-package />
+              <span data-i18n="schedule.pkg.one90">1회 90분 수업</span>
+            </label>
+          </div>
+          <p class="schedule-hint" data-schedule-hint hidden></p>
+          <div class="slot-windows" data-slot-windows hidden>
+            <article class="learn-card">
+              <h3 data-i18n="schedule.nightTitle">토요일 밤 · 한국시간 22:00–24:00</h3>
+              <div class="time-grid" data-slot-grid="night"></div>
+            </article>
+            <article class="learn-card">
+              <h3 data-i18n="schedule.sundayTitle">일요일 아침 · 한국시간 08:00–12:00</h3>
+              <div class="time-grid" data-slot-grid="sunday"></div>
+            </article>
+          </div>
+          <div class="tune-block" data-tune-block hidden>
+            <p class="tune-line" data-tune-line></p>
+            <p class="session-line">
+              <span data-i18n="schedule.hoursBefore">원하는 수업시수는</span>
+              <select data-session-count aria-label="수업 시수">
+                <option value="">—</option>
+              </select>
+              <span data-i18n="schedule.hoursAfter">회 입니다.</span>
+              <span class="session-mins" data-session-mins></span>
+            </p>
+            <p class="session-worth" data-session-worth></p>
+          </div>
+          <p class="slot-summary" data-slot-summary hidden></p>
+          <button class="consult-btn schedule-consult" type="button" data-schedule-consult>
+            <span class="consult-sparkle" aria-hidden="true">✦</span>
+            <span data-i18n="schedule.consult">이 시간표로 무료 수업 상담받기</span>
+            <span class="consult-sparkle" aria-hidden="true">✦</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="band" id="reviews">
+        <div class="wrap">
+          <h2 data-i18n="reviews.title">후기</h2>
+          <div class="review-grid stack">
+            <article class="review-card">
+              <p data-i18n="reviews.1">질문하는 게 덜 어려워졌어요. 말이 느려도 기다려 주셔서 편하게 수업했어요.</p>
+              <p class="review-name" data-i18n="reviews.1.name">수강생 A</p>
+            </article>
+            <article class="review-card">
+              <p data-i18n="reviews.2">업무에서 바로 쓸 표현을 연습해서 좋았어요. 일상 회화만 반복하지 않아요.</p>
+              <p class="review-name" data-i18n="reviews.2.name">수강생 B</p>
+            </article>
+            <article class="review-card">
+              <p data-i18n="reviews.3">Cursor로 작은 페이지를 끝까지 만들었어요. 보기만 하는 수업이 아니었어요.</p>
+              <p class="review-name" data-i18n="reviews.3.name">수강생 C</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <aside class="catch catch-wide" data-catch="web" data-scroll>
+        <div class="catch-bg" aria-hidden="true"></div>
+        <div class="catch-veil" aria-hidden="true"></div>
+        <div class="catch-inner">
+          <p class="catch-kicker" data-i18n="catch.3.kicker">미국 3년차 현직 개발자와 함께 1:1로 진행하는 실전 바이브 코딩.</p>
+          <p class="catch-line" data-i18n="catch.3.line">번역기를 거치지 않는 네이티브 감각으로, 아이디어를 단숨에 작동하는 웹서비스로 만드세요.</p>
+        </div>
+      </aside>
+
+      <section class="band" id="instructor">
+        <div class="wrap split">
+          <h2 data-i18n="instructor.title">강사</h2>
+          <div class="instructor-row">
+            <div class="profile-frame">
+              <img
+                src="src/features/instructor/joseph-starke.png"
+                alt="Joseph Starke 프로필 사진"
+                data-i18n-alt="instructor.photoAlt"
+              />
+            </div>
+            <div>
+              <h3 data-i18n="instructor.name">Joseph Starke</h3>
+              <p class="lede" data-i18n="instructor.body">
+                미국에 있는 개발자입니다. Cursor로 직접 만드는 과정을 보여 주며, 여러분이 첫 프로젝트를 끝까지 밀어 보도록 옆에서 돕습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="register">
+        <div class="wrap">
+          <h2 data-i18n="register.title">무료 수업 상담</h2>
+          <p class="lede" data-i18n="register.lede">
+            목표와 선호 시간을 고른 뒤 보내 주세요. 없어도 상담은 가능하고, 시간은 상담 후 확정됩니다.
+          </p>
+          <form class="form" data-register-form>
+            <div class="form-fields">
+              <label>
+                <span data-i18n="register.goal">나의 목표</span>
+                <select name="goal" data-goal-field>
+                  <option value="" data-i18n="goal.placeholder">목표를 골라 주세요</option>
+                  <option value="conversation" data-i18n="goal.conversation">원어민회화에 적응하고 더 자연스럽게 질문하고 싶어요</option>
+                  <option value="business" data-i18n="goal.business">일상회화보다는 비지니스 회화를 늘리고 싶어요</option>
+                  <option value="vibe" data-i18n="goal.vibe">바이브코딩을 배워 내것으로 만들고 싶어요</option>
+                  <option value="special" data-i18n="goal.special">바이브코딩에서 특별히 배우고 싶은 파트가 있어요</option>
+                  <option value="other" data-i18n="goal.other">기타(하고 싶은 말에 작성해주세요)</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="register.name">이름</span>
+                <input name="name" type="text" required autocomplete="name" />
+              </label>
+              <label>
+                <span data-i18n="register.phone">전화번호</span>
+                <input name="phone" type="tel" required autocomplete="tel" />
+              </label>
+              <label>
+                <span data-i18n="register.email">이메일</span>
+                <input name="email" type="email" required autocomplete="email" />
+              </label>
+              <label>
+                <span data-i18n="register.kakao">카카오톡 아이디 (선택)</span>
+                <input name="kakao" type="text" autocomplete="off" />
+              </label>
+              <fieldset>
+                <legend class="dt" data-i18n="register.contact">연락 받을 방법</legend>
+                <div class="choices">
+                  <label><input type="radio" name="contact" value="email" checked /> <span data-i18n="register.contactEmail">이메일</span></label>
+                  <label><input type="radio" name="contact" value="kakao" /> <span data-i18n="register.contactKakao">카카오톡</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-schedule" data-form-schedule>
+              <p class="dt" data-i18n="register.timetable">시간표</p>
+              <div class="package-grid">
+                <label class="pkg-card">
+                  <input type="radio" name="consultPackage" value="two45" data-package />
+                  <span data-i18n="schedule.pkg.two45">토요일 또는 일요일 2회 (45분씩)</span>
+                </label>
+                <label class="pkg-card">
+                  <input type="radio" name="consultPackage" value="one90" data-package />
+                  <span data-i18n="schedule.pkg.one90">1회 90분 수업</span>
+                </label>
+              </div>
+              <p class="schedule-hint" data-schedule-hint hidden></p>
+              <div class="slot-windows" data-slot-windows hidden>
+                <article class="learn-card">
+                  <h3 data-i18n="schedule.nightTitle">토요일 밤 · 한국시간 22:00–24:00</h3>
+                  <div class="time-grid" data-slot-grid="night"></div>
+                </article>
+                <article class="learn-card">
+                  <h3 data-i18n="schedule.sundayTitle">일요일 아침 · 한국시간 08:00–12:00</h3>
+                  <div class="time-grid" data-slot-grid="sunday"></div>
+                </article>
+              </div>
+              <div class="tune-block" data-tune-block hidden>
+                <p class="tune-line" data-tune-line></p>
+                <p class="session-line">
+                  <span data-i18n="schedule.hoursBefore">원하는 수업시수는</span>
+                  <select data-session-count name="sessions" aria-label="수업 시수">
+                    <option value="">—</option>
+                  </select>
+                  <span data-i18n="schedule.hoursAfter">회 입니다.</span>
+                  <span class="session-mins" data-session-mins></span>
+                </p>
+                <p class="session-worth" data-session-worth></p>
+              </div>
+              <p class="slot-summary" data-slot-summary hidden></p>
+              <input type="hidden" name="timetable" data-timetable-field />
+            </div>
+            <div class="form-fields">
+              <label>
+                <span data-i18n="register.note">하고 싶은 말 (선택)</span>
+                <textarea name="note"></textarea>
+              </label>
+              <p class="status" data-form-status hidden></p>
+              <button class="btn" type="submit" data-i18n="register.submit">상담 신청 보내기</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <p data-i18n="footer.credit">미국인과 함께하는 바이브코딩 배우기</p>
+      <a href="mailto:henzy0625@gmail.com" data-i18n="footer.email">henzy0625@gmail.com</a>
+    </footer>
+
+    <script type="module" src="src/app/main.js"></script>
+  </body>
+</html>
